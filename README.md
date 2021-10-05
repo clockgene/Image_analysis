@@ -1,4 +1,4 @@
-# Image_analysis
+# Image_analysis, instructions for Laboratory og Biological Rhythms, IPHYS CAS
 
 Optional:
 For mp4 movies, need libav, latest releases are here https://libav.org/download/
@@ -9,7 +9,7 @@ Necessary:
 If you do not have it already, install miniconda3 from here: 
 
 https://docs.conda.io/en/latest/miniconda.html
-Choose Python 3.8 Windows 64bit installer of Miniconda3, download, run the file, select admin, for all, select add to PATH, do not make default (unless you have no previous Python environment)
+Choose Python 3.8 or newer Windows 64bit installer of Miniconda3, download, run the file, select admin, for all, select add to PATH, do not make default (unless you have no previous Python environment)
 
 More information on Anaconda and its environments:
 https://towardsdatascience.com/a-guide-to-conda-environments-bc6180fc533
@@ -44,12 +44,12 @@ call python -m idlelib
 
 # C:\ProgramData\... need to be modified to your actual path to miniconda, which depends on admin/user install!
 
-AFTER it is installed, copy these scripts from here
-Z:\_install\Python scripts Martin\Image_analysis
-LV200_crop_pad_cosmic_rays_v3.py
+AFTER it is installed, copy/download these scripts
 LV200_rename_move_v4_automatic.py
+LV200_crop_pad_cosmic_rays_v3.py
 
-Open them in idle and follow instructions in them.
+Open them in idle and follow instructions in them. LV200_rename_move is for renaming files from different folders (needed for treatment experiments only), 
+LV200_crop_pad_cosmic_rays enhances the images and creates animated GIF or MP4 movies.
 
 To analyze images in ImageJ and get data from macro ROIs/cell-sized grid ROIs and then analyze them in per2py, follow _manual_per2py_lumicycle.txt. 
 To use cell tracking in ImageJ TrackMate and analyze in per2py, follow manual_ImageJ and Trackmate v1.txt and _manual_per2py_trackmate.txt
