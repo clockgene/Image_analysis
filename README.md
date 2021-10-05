@@ -34,8 +34,8 @@ conda activate image
 idle
 
 
-# to use batch file that autoactivates image env and starts idle/spyder, right click on desktop, create New text document (not Word, notepad txt),
-# rename it to conda_image.bat, open it in notepad and copy paste this:
+To use batch file that autoactivates image env and starts idle/spyder, right click on desktop, create New text document (not Word, notepad txt),
+rename it to conda_image.bat, open it in notepad and copy paste this:
 
 @echo on
 call C:\ProgramData\Miniconda3\Scripts\activate.bat
