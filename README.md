@@ -51,5 +51,4 @@ LV200_crop_pad_cosmic_rays_v3.py
 Open them in idle and follow instructions in them. LV200_rename_move is for renaming files from different folders (needed for treatment experiments only), 
 LV200_crop_pad_cosmic_rays enhances the images and creates animated GIF or MP4 movies.
 
-To analyze images in ImageJ and get data from macro ROIs/cell-sized grid ROIs and then analyze them in per2py, follow _manual_per2py_lumicycle.txt. 
-To use cell tracking in ImageJ TrackMate and analyze in per2py, follow manual_ImageJ and Trackmate v1.txt and _manual_per2py_trackmate.txt
+To analyze images in ImageJ https://imagej.net/software/fiji/index and get data from macro ROIs/cell-sized grid ROIs and then analyze them in per2py, follow _manual_per2py_lumicycle.txt. To use cell tracking in ImageJ TrackMate and analyze in per2py, follow manual_ImageJ and Trackmate v1.txt and _manual_per2py_trackmate.txt
