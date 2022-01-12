@@ -46,7 +46,7 @@ call python -m idlelib
 
 AFTER it is installed, copy/download these scripts
 LV200_rename_move_v4_automatic.py
-LV200_crop_pad_cosmic_rays_v3.py
+LV200_crop_pad_cosmic_rays_v4.py
 
 Open them in idle and follow instructions in them. LV200_rename_move is for renaming files from different folders (needed for treatment experiments only), 
 LV200_crop_pad_cosmic_rays enhances the images and creates animated GIF or MP4 movies.
