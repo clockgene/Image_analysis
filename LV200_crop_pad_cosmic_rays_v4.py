@@ -1,4 +1,4 @@
-# v.220112
+# v.20220414
 
 from tkinter import filedialog
 from tkinter import *
@@ -187,11 +187,8 @@ for i_mod in range(len(imgEQ) - 1):
 # If no further enhancement needed, uncomment this to create gif.
 #imgEQ = np.asarray(images)
 
-imageio.mimsave(f'{mydir}\\mod2\\_gif_mod2.gif', imgEQ, duration = 0.0667)   # duration=1/fps >>> modify duration as needed, 0.04 for 25fps, 0.0667 OK for longer movies, 0.1 for 3h/frame
+imageio.mimsave(f'{mydir}\\mod2\\_gif_{mydir[-24:-20]}.gif', imgEQ, duration = 0.0667)   # duration=1/fps >>> modify duration as needed, 0.04 for 25fps, 0.0667 OK for longer movies, 0.1 for 3h/frame
 
 # To create movies, files need to be renamed first to imgXXX, use Rename_move script, also use DOS paths to avoid potential problems.
 #os.system(f'cmd /c "{path_to_avconv}avconv -f image2 -r 10 -i {mydir}\\mod2\\img%4d.tif -vcodec qtrle -pix_fmt rgb24 -t 15 {mydir}\\_movie_lossless_mod2.mov"')         # to specify nonstand framerate set parameter -r 25 to another number, now is 10 fps
 #os.system(f'cmd /k "{path_to_avconv}avconv -f image2 -r 10 -i {mydir}\\mod2\\img%4d.tif -mbd rd -flags +mv4+aic -trellis 2 -cmp 2 -subcmp 2 -g 300 {mydir}\\_movie_small_mod2.mp4"') # PROBLEM-white space path, nonstandard chars
-
-
-
