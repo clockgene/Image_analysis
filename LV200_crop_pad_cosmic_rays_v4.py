@@ -185,9 +185,11 @@ for i_mod in range(len(imgEQ) - 1):
 
 
 # If no further enhancement needed, uncomment this to create gif.
-#imgEQ = np.asarray(images)
+# imgEQ = np.asarray(images)
 
-imageio.mimsave(f'{mydir}\\mod2\\_gif_{mydir[-24:-20]}.gif', imgEQ, duration = 0.0667)   # duration=1/fps >>> modify duration as needed, 0.04 for 25fps, 0.0667 OK for longer movies, 0.1 for 3h/frame
+# imageio.mimsave(f'{mydir}\\mod2\\_gif_{mydir[-23:-20]}.gif', imgEQ, duration = 0.0667)   # duration=1/fps >>> modify duration as needed, 0.04 for 25fps, 0.0667 OK for longer movies, 0.1 for 3h/frame
+imageio.mimsave(f'{mydir}\\mod2\\_gif_.gif', imgEQ, duration = 0.0667)   # duration=1/fps >>> modify duration as needed, 0.04 for 25fps, 0.0667 OK for longer movies, 0.1 for 3h/frame
+
 
 # To create movies, files need to be renamed first to imgXXX, use Rename_move script, also use DOS paths to avoid potential problems.
 #os.system(f'cmd /c "{path_to_avconv}avconv -f image2 -r 10 -i {mydir}\\mod2\\img%4d.tif -vcodec qtrle -pix_fmt rgb24 -t 15 {mydir}\\_movie_lossless_mod2.mov"')         # to specify nonstand framerate set parameter -r 25 to another number, now is 10 fps
