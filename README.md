@@ -46,7 +46,7 @@ call python -m idlelib
 
 AFTER it is installed, copy/download these scripts
 
-LV200_rename_move_v4_automatic.py
+LV200_rename_move_v5_automatic.py
 
 LV200_crop_pad_cosmic_rays_v5.py
 
