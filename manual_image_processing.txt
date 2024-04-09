@@ -21,11 +21,12 @@ conda create -n image
 conda activate image
 conda env list   		
 conda install numpy
-conda install scikit-image 
-conda install opencv-contrib-python                                
+conda install scikit-image                          
+conda install scipy
 
 # If you have trouble installing from default channel (i.e. you get some error message), type this instead: 
 conda install --channel conda-forge NAME-OF-THE-PACKAGE
+
 
 # to run in IDLE, type this in conda prompt
 conda activate image
@@ -44,7 +45,7 @@ call python -m idlelib
 
 AFTER it is installed, copy these scripts from here
 Z:\_install\Python scripts Martin\Image_analysis
-LV200_crop_pad_cosmic_rays_v3.py
+LV200_crop_pad_cosmic_rays.py
 LV200_rename_move_v4_automatic.py
 
 Open them in idle and follow instructions in them.
