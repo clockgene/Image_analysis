@@ -5,7 +5,7 @@ import numpy as np
 #from matplotlib import pyplot as plt
 #import scipy
 from scipy import ndimage, misc
-#import cv2  # problem with installation, use scipy and numpy trick
+# import cv2  # problem with installation, use scipy and numpy trick
 #from PIL import Image
 from skimage import io
 import skimage
@@ -26,7 +26,7 @@ all_at_one = False
 
 ######### Remove cosmic rays by 'subtraction', 'median_filter' or False (not at all)? ###########
 cosmic_rays = 'subtraction'        # subtracts pixels between consecutive images, no blurring, but lose 1 image
-#cosmic_rays = 'median_filter'       # blurs image
+#cosmic_rays = 'median_filter'       # blurs image  -- NOT WORKING WITH .astype(np.int32) - add IFs
 #cosmic_rays = False
 
 ######### Decrease size of contrast-enhanced img or not? Full sized images may cause memory errors on some PCs. #####
@@ -34,7 +34,7 @@ isize = 0.6   # 0.6 default, 0.3 for web and small imgs in presentations
 
 
 ######### Last frame before treatment ##########
-treatment = 90
+treatment = 0
 
 ####### CHANGE HOW MUCH pixels to CROP from each side of original image before rotation
 upper = 0              #if explant moves down, crop here
@@ -92,7 +92,10 @@ if all_at_one is False:
     conc_list = []
     for file in files:
         print(file)
-        img = io.imread(file).astype(np.int32)
+        if cosmic_rays == 'subtraction':            
+            img = io.imread(file).astype(np.int32)
+        else:
+            img = io.imread(file)
         conc_list += [img] 
 
     # To display image stored as array>>> plt.imshow(conc_list[0]), then plt.show()
@@ -266,7 +269,10 @@ if all_at_one is True:
         conc_list = []
         for file in files:
             print(file)
-            img = io.imread(file).astype(np.int32)
+            if cosmic_rays == 'subtraction':            
+                img = io.imread(file).astype(np.int32)
+            else:
+                img = io.imread(file)            
             conc_list += [img] 
 
         # To display image stored as array>>> plt.imshow(conc_list[0]), then plt.show()
